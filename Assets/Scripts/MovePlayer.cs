@@ -12,7 +12,7 @@ public class MovePlayer : MonoBehaviour
     private Animator _animator;
     private Vector2 _direction;
     private float _moveSpeed = 5f;
-    private float _jumpForse = 7f;
+    private float _jumpForse = 500f;
     private bool _faceRight = true;
 
     private const string VectorX = "VectorX";
@@ -33,7 +33,7 @@ public class MovePlayer : MonoBehaviour
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _jumpForse);
+            _rigidbody.AddForce(new Vector3(0f, _jumpForse));
     }
 
     private void Run()
