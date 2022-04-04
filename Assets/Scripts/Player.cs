@@ -9,9 +9,10 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent<Coin>(out Coin coin))
+        if (collision.TryGetComponent<Coin>(out Coin coin))
         {
             _coins.Add(coin);
+            Destroy(collision.gameObject);
         }
     }
 }
