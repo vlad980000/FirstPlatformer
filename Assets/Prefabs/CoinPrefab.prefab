@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6188814357722986790}
   - component: {fileID: 6188814357722986789}
   - component: {fileID: 6188814357722986788}
+  - component: {fileID: 3702078266334142508}
+  - component: {fileID: -5886148116126636332}
   - component: {fileID: 3717264669811921979}
-  - component: {fileID: 5885420067421079412}
   m_Layer: 0
   m_Name: CoinPrefab
   m_TagString: Untagged
@@ -104,6 +105,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3702078266334142508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188814357722986787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4921dd4ce7430a24e8678267afcb9f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -5886148116126636332}
+        m_MethodName: SpawnCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &-5886148116126636332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188814357722986787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f4ab14e1f288a4dbebe75b16044ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circleCollider2D: {fileID: 3717264669811921979}
 --- !u!58 &3717264669811921979
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -120,15 +160,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.34
---- !u!114 &5885420067421079412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6188814357722986787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4921dd4ce7430a24e8678267afcb9f43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

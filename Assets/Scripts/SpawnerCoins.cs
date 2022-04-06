@@ -8,11 +8,8 @@ public class SpawnerCoins : MonoBehaviour
     [SerializeField] private GameObject _coinPrefab;
     [SerializeField] private float _timeBetweenSpawn;
 
-    private bool _isSpawning = true;
-
     private void Start()
     {
-        GetComponent<BoxCollider2D>();
         SpawnCoin();
     }
 

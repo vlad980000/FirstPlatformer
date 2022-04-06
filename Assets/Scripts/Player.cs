@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
         if (collision.TryGetComponent<Coin>(out Coin coin))
         {
             _coins.Add(coin);
+            Destroy(collision.gameObject);
         }
     }
 }
