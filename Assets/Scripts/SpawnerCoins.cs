@@ -7,23 +7,23 @@ public class SpawnerCoins : MonoBehaviour
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Coin _coin;
 
-    private void Start()
-    {
-        SpawnCoin();
-    }
-
     private void SpawnCoin()
     {
-        Instantiate(_coin, _spawnPoint);
+        _coin.Show();
     }
 
     private void OnEnable()
     {
-        Coin.OnDestroyed += SpawnCoin;
+        _coin.Destroyed += OnDestroyed;
     }
 
-    private void OnDesable()
+    private void OnDisable()
     {
-        Coin.OnDestroyed -= SpawnCoin;
+        _coin.Destroyed -= OnDestroyed;
+    }
+
+    private void OnDestroyed()
+    {
+        Invoke(nameof(SpawnCoin),3f);
     }
 }
