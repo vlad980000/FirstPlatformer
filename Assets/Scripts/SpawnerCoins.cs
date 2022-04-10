@@ -19,16 +19,11 @@ public class SpawnerCoins : MonoBehaviour
 
     private void OnEnable()
     {
-        _coin.Destroyed += OnCoinDestroed;
+        Coin.OnDestroyed += SpawnCoin;
     }
 
-    private void OnDisable()
+    private void OnDesable()
     {
-        _coin.Destroyed -= OnCoinDestroed;
-    }
-
-    private void OnCoinDestroed()
-    {
-        SpawnCoin();
+        Coin.OnDestroyed -= SpawnCoin;
     }
 }
