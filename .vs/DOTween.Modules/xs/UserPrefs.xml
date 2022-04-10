@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{D60D94E5-1107-FE7E-3F0A-312588FB250F}|">
+  <MonoDevelop.Ide.ItemProperties.DOTween.Modules PreferredExecutionTarget="e1a30c37-507c-48ba-8d21-af9b33a66739" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DOTween.Modules" expanded="True">
+            <Node name="Assets" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
