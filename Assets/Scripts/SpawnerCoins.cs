@@ -5,16 +5,25 @@ using UnityEngine;
 public class SpawnerCoins : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoint;
-    [SerializeField] private GameObject _coinPrefab;
-    [SerializeField] private float _timeBetweenSpawn;
-
-    private void Start()
-    {
-        SpawnCoin();
-    }
+    [SerializeField] private Coin _coin;
 
     private void SpawnCoin()
     {
-        Instantiate(_coinPrefab, _spawnPoint);
+        _coin.Show();
+    }
+
+    private void OnEnable()
+    {
+        _coin.Destroyed += OnDestroyed;
+    }
+
+    private void OnDisable()
+    {
+        _coin.Destroyed -= OnDestroyed;
+    }
+
+    private void OnDestroyed()
+    {
+        Invoke(nameof(SpawnCoin),3f);
     }
 }
