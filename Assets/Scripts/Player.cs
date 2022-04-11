@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Player : MonoBehaviour
-{ 
-    private List<Coin> _coins = new List<Coin>();
+{
+    private int _money;
     private BoxCollider2D _boxCollider;
 
-    public int Money { get; set; }
+    public int Money => _money;
+
+    public event UnityAction MoneyChanged;
 
     private void Start()
     {
@@ -19,7 +22,13 @@ public class Player : MonoBehaviour
     {
         if (collision.TryGetComponent(out Coin coin))
         {
-            _coins.Add(coin);
+            AddMoney(coin.Cost);
         }
+    }
+
+    public void AddMoney(int coinCost)
+    {
+        MoneyChanged?.Invoke();
+        _money += coinCost;
     }
 }
