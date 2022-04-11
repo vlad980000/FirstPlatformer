@@ -5,7 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Player : MonoBehaviour
 {
+<<<<<<< Updated upstream
     private List<Coin> _coins = new List<Coin>();
+=======
+    [SerializeField] private int _money;
+
+>>>>>>> Stashed changes
     private BoxCollider2D _boxCollider;
 
     private void Start()
