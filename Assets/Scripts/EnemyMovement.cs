@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         _direction = _movePoints[0].position;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -43,6 +44,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void Flip()
     {
-        GetComponent<SpriteRenderer>().flipX = _direction.x < transform.position.x;
+        _spriteRenderer.flipX = _direction.x < transform.position.x;
     }
 }

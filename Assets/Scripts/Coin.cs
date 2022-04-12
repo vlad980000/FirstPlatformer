@@ -8,9 +8,9 @@ public class Coin : MonoBehaviour
 {
     [SerializeField] private int _cost;
 
-    public UnityAction Destroyed;
-
     public int Cost => _cost;
+
+    public UnityAction Destroyed;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
